@@ -11,6 +11,8 @@
   "dependencies": {
     "@clerk/nextjs": "^6.12.1",
     "@radix-ui/react-slot": "^1.1.2",
+    "@stream-io/node-sdk": "^0.4.16",
+    "@stream-io/video-react-sdk": "^1.12.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "convex": "^1.19.3",
