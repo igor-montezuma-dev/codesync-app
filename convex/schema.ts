@@ -1,5 +1,5 @@
-import { defineSchema, defineTable } from 'convex/server'
-import { v } from 'convex/values'
+import { defineSchema, defineTable } from 'convex/server';
+import { v } from 'convex/values';
 
 export default defineSchema({
     user: defineTable({
@@ -10,3 +10,5 @@ export default defineSchema({
         clerkId: v.string(),
     }).index("by_clerk_id", ["clerkId"]),
 });
+
+//https://vocal-eft-26.clerk.accounts.dev
