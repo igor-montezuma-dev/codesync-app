@@ -198,7 +198,40 @@ func IsPalindrome(x int) bool {
 }`
     },
   },
+  {
+    id: "factorial",
+    title: "Fatorial de um Número",
+    description:
+      "Dado um número inteiro `n`, retorne o fatorial de `n`.",
+    examples: [
+      {
+        input: "n = 5",
+        output: "120",
+      },
+      {
+        input: "n = 3",
+        output: "6",
+      },
+    ],
+    starterCode: {
+      javascript: `function factorial(n) {
+  // Escreva sua solução aqui
+}`,
+      python: `def factorial(n):
+    # Escreva sua solução aqui
+    pass`,
+      java: `class Solution {
+    public int factorial(int n) {
+        // Escreva sua solução aqui
+    }
+}`,
+      csharp: "",
+      ruby: "",
+      go: ""
+    }
+  }
 ];
+
 
 
 export const LANGUAGES = [
