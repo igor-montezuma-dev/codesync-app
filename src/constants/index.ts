@@ -65,14 +65,14 @@ export const QUICK_ACTIONS = [
 export const CODING_QUESTIONS: CodeQuestion[] = [
   {
     id: "two-sum",
-    title: "Two Sum",
+    title: "Soma de Dois Números",
     description:
-      "Given an array of integers `nums` and an integer `target`, return indices of the two numbers in the array such that they add up to `target`.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.",
+      "Dado um array de números inteiros `nums` e um inteiro `target`, retorne os índices dos dois números no array cuja soma seja igual a `target`.",
     examples: [
       {
         input: "nums = [2,7,11,15], target = 9",
         output: "[0,1]",
-        explanation: "Because nums[0] + nums[1] == 9, we return [0, 1]",
+        explanation: "Porque nums[0] + nums[1] == 9, retornamos [0, 1]",
       },
       {
         input: "nums = [3,2,4], target = 6",
@@ -81,31 +81,42 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
     ],
     starterCode: {
       javascript: `function twoSum(nums, target) {
-  // Write your solution here
-  
+  // Escreva sua solução aqui
 }`,
       python: `def two_sum(nums, target):
-    # Write your solution here
+    # Escreva sua solução aqui
     pass`,
       java: `class Solution {
     public int[] twoSum(int[] nums, int target) {
-        // Write your solution here
-        
+        // Escreva sua solução aqui
     }
 }`,
+      csharp: `public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        // Escreva sua solução aqui
+    }
+}`,
+      ruby: `def two_sum(nums, target)
+  # Escreva sua solução aqui
+end`,
+      go: `package main
+func TwoSum(nums []int, target int) []int {
+  // Escreva sua solução aqui
+  return nil
+}`
     },
     constraints: [
       "2 ≤ nums.length ≤ 104",
       "-109 ≤ nums[i] ≤ 109",
       "-109 ≤ target ≤ 109",
-      "Only one valid answer exists.",
+      "Apenas uma resposta válida existe.",
     ],
   },
   {
     id: "reverse-string",
-    title: "Reverse String",
+    title: "Inverter String",
     description:
-      "Write a function that reverses a string. The input string is given as an array of characters `s`.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.",
+      "Escreva uma função que inverta uma string. A string de entrada é fornecida como um array de caracteres `s`.",
     examples: [
       {
         input: 's = ["h","e","l","l","o"]',
@@ -118,61 +129,87 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
     ],
     starterCode: {
       javascript: `function reverseString(s) {
-  // Write your solution here
-  
+  // Escreva sua solução aqui
 }`,
       python: `def reverse_string(s):
-    # Write your solution here
+    # Escreva sua solução aqui
     pass`,
       java: `class Solution {
     public void reverseString(char[] s) {
-        // Write your solution here
-        
+        // Escreva sua solução aqui
     }
 }`,
+      csharp: `public class Solution {
+    public void ReverseString(char[] s) {
+        // Escreva sua solução aqui
+    }
+}`,
+      ruby: `def reverse_string(s)
+  # Escreva sua solução aqui
+end`,
+      go: `package main
+func ReverseString(s []rune) {
+  // Escreva sua solução aqui
+}`
     },
   },
   {
     id: "palindrome-number",
-    title: "Palindrome Number",
+    title: "Número Palíndromo",
     description:
-      "Given an integer `x`, return `true` if `x` is a palindrome, and `false` otherwise.\n\nAn integer is a palindrome when it reads the same forward and backward.",
+      "Dado um número inteiro `x`, retorne `true` se `x` for um palíndromo e `false` caso contrário.",
     examples: [
       {
         input: "x = 121",
         output: "true",
-        explanation: "121 reads as 121 from left to right and from right to left.",
+        explanation: "121 é lido da mesma forma da esquerda para a direita e vice-versa.",
       },
       {
         input: "x = -121",
         output: "false",
         explanation:
-          "From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.",
+          "Lendo da esquerda para a direita, temos -121. Da direita para a esquerda, temos 121-. Portanto, não é um palíndromo.",
       },
     ],
     starterCode: {
       javascript: `function isPalindrome(x) {
-  // Write your solution here
-  
+  // Escreva sua solução aqui
 }`,
       python: `def is_palindrome(x):
-    # Write your solution here
+    # Escreva sua solução aqui
     pass`,
       java: `class Solution {
     public boolean isPalindrome(int x) {
-        // Write your solution here
-        
+        // Escreva sua solução aqui
     }
 }`,
+      csharp: `public class Solution {
+    public bool IsPalindrome(int x) {
+        // Escreva sua solução aqui
+    }
+}`,
+      ruby: `def is_palindrome(x)
+  # Escreva sua solução aqui
+end`,
+      go: `package main
+func IsPalindrome(x int) bool {
+  // Escreva sua solução aqui
+  return false
+}`
     },
   },
 ];
+
 
 export const LANGUAGES = [
   { id: "javascript", name: "JavaScript", icon: "/javascript.png" },
   { id: "python", name: "Python", icon: "/python.png" },
   { id: "java", name: "Java", icon: "/java.png" },
+  { id: "csharp", name: "C#", icon: "/csharp.png" },
+  { id: "ruby", name: "Ruby", icon: "/ruby.png" },
+  { id: "go", name: "Go", icon: "/go.png" },
 ] as const;
+
 
 export interface CodeQuestion {
   id: string;
@@ -187,6 +224,9 @@ export interface CodeQuestion {
     javascript: string;
     python: string;
     java: string;
+    csharp: string;
+    ruby: string;
+    go: string;
   };
   constraints?: string[];
 }

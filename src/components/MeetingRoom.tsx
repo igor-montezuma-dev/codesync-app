@@ -22,6 +22,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "./ui/resizable";
+import CodeEditor from "./CodeEditor";
 
 function MeetingRoom() {
   const router = useRouter();
@@ -104,7 +105,7 @@ function MeetingRoom() {
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={65} minSize={25}>
-          <h1>Editor de código</h1>
+          <CodeEditor />
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
