@@ -9,6 +9,7 @@ import {
 import { LayoutListIcon, LoaderIcon, UsersIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import EndCallButton from "./EndCallButton";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -42,7 +43,12 @@ function MeetingRoom() {
   return (
     <div className="h-[calc(100vh-4rem-1px)] ">
       <ResizablePanelGroup direction="horizontal">
-      <ResizablePanel defaultSize={35} minSize={25} maxSize={100} className="relative">
+        <ResizablePanel
+          defaultSize={35}
+          minSize={25}
+          maxSize={100}
+          className="relative"
+        >
           {/* VIDEO LAYOUT */}
           <div className="absolute inset-0">
             {layout === "grid" ? <PaginatedGridLayout /> : <SpeakerLayout />}
@@ -50,7 +56,9 @@ function MeetingRoom() {
             {/* PARTICIPANTS LIST OVERLAY */}
             {showParticipants && (
               <div className="absolute right-0 top-0 h-full w-[300px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                <CallParticipantsList onClose={() => setShowParticipants(false)} />
+                <CallParticipantsList
+                  onClose={() => setShowParticipants(false)}
+                />
               </div>
             )}
           </div>
@@ -88,7 +96,7 @@ function MeetingRoom() {
                     <UsersIcon className="size-4" />
                   </Button>
 
-                  {/* <EndCallButton /> */}
+                  <EndCallButton />
                 </div>
               </div>
             </div>
