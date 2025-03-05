@@ -56,7 +56,7 @@ function RecordingCard({ recording }: { recording: CallRecording }) {
           onClick={() => window.open(recording.url, "_blank")}
         >
           <PlayIcon className="size-4 mr-2" />
-          Play Recording
+          Assisistir gravação
         </Button>
         <Button variant="secondary" onClick={handleCopyLink}>
           <CopyIcon className="size-4" />

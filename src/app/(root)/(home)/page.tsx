@@ -5,6 +5,7 @@ import { QUICK_ACTIONS } from "@/constants";
 import { useUserRole } from "@/hooks/useUserRole";
 import { useQuery } from "convex/react";
 
+import LoaderUI from "@/components/LoaderUI";
 import MeetingModal from "@/components/MeetingModal";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -35,7 +36,7 @@ export default function Home() {
   };
 
   if (isLoading) {
-    return <div>Carregando...</div>;
+    return <LoaderUI />;
   }
 
   return (
