@@ -1,4 +1,4 @@
-import MettingCard from "@/components/MettingCard";
+import MettingCard from "@/components/MeetingCard";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {

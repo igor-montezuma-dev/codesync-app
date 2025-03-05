@@ -16,7 +16,7 @@ import {
 
 type Interview = Doc<"interviews">;
 
-function MettingCard({ interview }: { interview: Interview }) {
+function MeetingCard({ interview }: { interview: Interview }) {
   const { joinMeeting } = useMeetingActioins();
 
   const status = getMeetingStatus(interview);
@@ -77,4 +77,4 @@ function MettingCard({ interview }: { interview: Interview }) {
   );
 }
 
-export default MettingCard;
+export default MeetingCard;
