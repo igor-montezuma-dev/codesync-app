@@ -1,5 +1,6 @@
 "use client";
 
+import CommentDialog from "@/components/CommentDialog";
 import LoaderUI from "@/components/LoaderUI";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -140,6 +141,7 @@ function DashboardPage() {
                                 </Button>
                               </div>
                             )}
+                            <CommentDialog interviewId={interview._id} />
                           </CardFooter>
                         </Card>
                       );
