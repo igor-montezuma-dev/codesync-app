@@ -1,3 +1,4 @@
+import MettingCard from "@/components/MettingCard";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -21,7 +22,7 @@ import { TIME_SLOTS } from "@/constants";
 import { useUser } from "@clerk/nextjs";
 import { useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useMutation, useQuery } from "convex/react";
-import { Loader2Icon, XIcon } from "lucide-react";
+import { CalendarOffIcon, Loader2Icon, XIcon } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { api } from "../../../../convex/_generated/api";
@@ -285,6 +286,27 @@ function InterviewScheduleUI() {
           </DialogContent>
         </Dialog>
       </div>
+      {!interviews.length ? (
+        <div className="flex justify-center py-12">
+          <Loader2Icon className="size-7 animate-spin text-muted-foreground" />
+        </div>
+      ) : interviews.length > 0 ? (
+        <div className="space-y-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {interviews.map((interview) => (
+              <MettingCard key={interview._id} interview={interview} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="flex flex-col items-center justify-center h-[400px] gap-4">
+          <p className="text-center py-12 text-muted-foreground">
+            Sem entrevistas agendadas
+          </p>
+
+          <CalendarOffIcon className="size-8 text-emerald-500 animate-pulse" />
+        </div>
+      )}
     </div>
   );
 }
